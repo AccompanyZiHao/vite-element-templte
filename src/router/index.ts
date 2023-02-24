@@ -19,7 +19,7 @@ const routerPage = Object.entries(modulesConfig).map(
 
     return {
       path: `${v.path || '/' + path}`,
-      name: path,
+      name: `${String(v.name) || path}`,
       component: cmpObj[key],
     };
   }
